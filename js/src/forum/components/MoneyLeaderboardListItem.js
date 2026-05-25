@@ -6,7 +6,7 @@ import username from "flarum/helpers/username";
 export default class MoneyLeaderboardListItem extends Component {
   view() {
     const {leaderboardListItem,rankID} = this.attrs;
-    const moneyName = app.forum.attribute('antoinefr-money.moneyname') || '[money]';
+    const moneyName = app.forum.attribute('huoxin-money-with-history.moneyname') || app.forum.attribute('antoinefr-money.moneyname') || '[money]';
     const moneyValue = leaderboardListItem.attribute("money");
     const moneyText = app.forum.attribute('moneyLeaderBoardHideMoneyText') === "1"?moneyValue:moneyName.replace('[money]', moneyValue);
     let trophyClass = "MoneyLeaderboardListItemTrophyNone";
